@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.lang{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: yellow;
+}
+</style>
+</head>
+<body>
+<center>
+<h1>DOM (document object model)</h1>
+<p>dom is used to update or change or manage the html document through js</p>
+</center>
+<h1>result</h1>
+<div id="result"></div>
+<script>
+document.body.style.backgroundColor = "teal"
+let result = document.getElementById('result')
+result.innerHTML = `<h1 cla="lang" id="lang">${ document.documentElement.getAttribute('lang')}</h1>` 
+//printing firstchild name
+console.log(document.head.firstElementChild.nodeName) //meta
+//the nodename is used to display that value to string
+
+console.log(document.title) // to select the title
+document.title = "hello" //to assighning value to tiltle
+console.log(document.title) //to select the
+</script>
+</body>
+</html>

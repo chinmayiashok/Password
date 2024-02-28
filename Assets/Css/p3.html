@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .card{
+            padding: 10px;
+            border-radius: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+        }
+        #password{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .c{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <label for="">create password</label>
+        <input type="password" placeholder="create strong password" id="password">
+<div class="c">
+    <input type="checkbox" id="check" onclick="checkshow()">
+    <label for="" id="labeltext">show password</label>
+</div>
+    </div>
+</div>
+<script>
+    function checkshow(){
+        let checkbox = document.getElementById('check')
+        console.log(checkbox)
+        let inputbox = document.getElementById('pasword')
+        console.log(inputbox)
+
+        let labeltext = document.getElementById('labeltext')
+        if(checkbox.checked == true) {
+            inputbox.type = "type"
+            labeltext.innerText = "hide password"
+        }
+        else{
+            inputbox.type = "password"
+            labeltext.innerText = "show password"
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio button</title>
+</head>
+<body>
+
+<br><b> Choose your favroite person: </b><br>
+
+<input type="radio" id="Ashok" value="">Ashok<br> 
+<input type="radio" id="Shobha" value="">Shobha<br> 
+<input type="radio" id="Bhuvi" value="">Bhuvi<br>
+<input type="radio" id="Harsha" value="">Harsha<br><br>     
+
+<button type="button" onclick=" checkButton()"> result </button> 
+    
+<h3 id="display" style= "color:green"> </h3>
+<h4 id="error" style= "color:red"> </h4>
+
+<script>
+function checkButton() {  
+            if(document.getElementById('Ashok').checked) { 
+                document.getElementById("display").innerHTML = document.getElementById("Ashok").value 
+                    + " He is my favorite"; 
+            } 
+            else if(document.getElementById('Shobha').checked) { 
+                document.getElementById("display").innerHTML = document.getElementById("Shobha").value 
+                    + " she is my everything";   
+            } 
+            else if(document.getElementById('Bhuvi').checked) { 
+                document.getElementById("display").innerHTML = document.getElementById("Bhuvi").value 
+                    + " Best sis in the world";   
+            } 
+            else if(document.getElementById('Harsha').checked) { 
+                document.getElementById("display").innerHTML = document.getElementById("Harsha").value 
+                    + " My caterpliller";   
+            }
+            else { 
+                document.getElementById("error").innerHTML 
+                    = " No One are favorite"; 
+            } 
+        } 
+</script> 
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio button</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<h1> Choose your favroite person </h1>
+
+<input type="radio" id="Ashok" value="Ashok">Ashok<br><br> 
+<input type="radio" id="Shobha" value="Shobha">Shobha<br>
+
+<div class="c">
+<input type="radiobutton" id="check" onclick="checkShow()">
+<label for="" id="labeltext">submit </label>
+</div>    
+<script>  
+function checkButton() {    
+            if(document.getElementById('Ashok').checked) {   
+            document.getElementById("disp").innerHTML = document.getElementById("Ashok").value   
+            + " radio button is checked";   
+            }   
+            else if(document.getElementById('Shobha').checked) {   
+            document.getElementById("disp").innerHTML = document.getElementById("Shobha").value   
+            + " radio button is checked";   
+            } 
+            else {   
+                document.getElementById("error").innerHTML   
+                    = "Ashok is your favorite";   
+            }   
+
+}  
+   
+</script>   
+</html> 
+</body> 
